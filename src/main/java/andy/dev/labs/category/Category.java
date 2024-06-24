@@ -1,8 +1,14 @@
-package andy.dev.labs.employee;
+package andy.dev.labs.category;
 
-public sealed class Category permits (Superior, Normal, Security, Driver){
-    private String categoryName;
+import andy.dev.labs.employee.CategoryName;
+import lombok.Getter;
+
+@Getter
+public abstract sealed class Category permits Superior, Normal, Security, Driver{
+    private CategoryName categoryName;
     private int weeklyNormalWorkingHour;
     private double weeklySalary;
     private double compensation;
+
+    abstract int calculateWorkingHour();
 }

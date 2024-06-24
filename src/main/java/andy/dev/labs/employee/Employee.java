@@ -1,14 +1,21 @@
 package andy.dev.labs.employee;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
+
 import java.time.LocalDate;
 
+@AllArgsConstructor
+@Getter
+@ToString
 public class Employee {
     private String firstName;
     private String lastName;
-    private long identificationNumber;
+    private String identificationNumber;
     private LocalDate dateOfBirth;
     private LocalDate hiringDate;
-    private LocalDate endOfcontract;
+    private LocalDate endOfContract;
     private double salary;
-    private Category category;
+    private CategoryName categoryName;
 }
